@@ -1,0 +1,37 @@
+{
+  "name": "agenda",
+  "version": "1.0.0",
+  "description": "Desafio Agenda",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/nodemon --exec ts-node src/index.ts",
+    "typeorm": "./node_modules/.bin/ts-node ./node_modules/typeorm/cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girigdun/agenda.git"
+  },
+  "keywords": [
+    "typescript",
+    "typeorm"
+  ],
+  "author": "Felipe Boldrini Miranda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girigdun/agenda/issues"
+  },
+  "homepage": "https://github.com/girigdun/agenda#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.8",
+    "nodemon": "^2.0.6",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.4.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.29"
+  }
+}
