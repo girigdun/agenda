@@ -6,7 +6,7 @@ import routes from './routes';
 
 const app = express();
 
-app.use(routes);
 app.use(express.json());
+app.use(routes);
 
 app.listen(3000, () => console.log('Server started at hhtp://localhost:3000'));

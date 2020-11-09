@@ -22,6 +22,9 @@ export class Task {
   userId: string;
 
   @Column()
+  finished: boolean;
+
+  @Column()
   createdAt: Date;
 
   @ManyToOne(() => User, (user) => user.tasks)

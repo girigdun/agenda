@@ -1,5 +1,22 @@
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryGeneratedColumn,
+  BeforeInsert,
+  BeforeUpdate,
+} from 'typeorm';
 import { Task } from './Task';
+import bcrypt from 'bcryptjs';
+
+export interface UserResponse {
+  cpf: string;
+  email: string;
+  phone: string;
+  password?: string;
+  createdAt?: Date;
+  tasks?: Task[];
+}
 
 @Entity('users')
 export class User {
@@ -23,4 +40,10 @@ export class User {
 
   @OneToMany(() => Task, (task) => task.user)
   tasks: Task[];
+
+  @BeforeInsert()
+  @BeforeUpdate()
+  hashPassword(): void {
+    this.password = bcrypt.hashSync(this.password, 10);
+  }
 }

@@ -28,6 +28,11 @@ export class CreateTaksTable1604800950597 implements MigrationInterface {
             type: 'varchar',
           },
           {
+            name: 'finished',
+            type: 'boolean',
+            default: false,
+          },
+          {
             name: 'userId',
             type: 'uuid',
           },
