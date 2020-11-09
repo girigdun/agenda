@@ -1,6 +1,17 @@
 # SAIE (SERVICE)
 
 API Desafio Agenda.
+Foi Utilizado uma Imagem de Docker postgres como banco de dados.
+```
+docker run --name postgres-0 -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postgres
+```
+
+## Required:
+
+npm i; para instalar as dependencias.
+npm run build; para construir.
+npm run typeorm migration:run; execute o comando de migrations 2 vezes, estando dentro do diretorio dist.
+
 
 - [EndPoints](#EndPoints)
 
