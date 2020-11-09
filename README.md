@@ -8,9 +8,9 @@ docker run --name postgres-0 -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 postg
 
 ## Required:
 
-npm i; para instalar as dependencias.
-npm run build; para construir.
-npm run typeorm migration:run; execute o comando de migrations 2 vezes, estando dentro do diretorio dist.
+- npm i; para instalar as dependencias.
+- npm run build; para construir.
+- npm run typeorm migration:run; execute o comando de migrations 2 vezes, estando dentro do diretorio dist.
 
 
 - [EndPoints](#EndPoints)
